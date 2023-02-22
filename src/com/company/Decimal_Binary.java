@@ -1,0 +1,21 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Decimal_Binary {
+    public static void main(String[] args) {
+        Scanner scan= new Scanner(System.in);
+        System.out.println("Enter The Decimal Number");
+        int n= scan.nextInt();
+        int decimal=0;
+        int i=1;
+        while(n>0)
+        {
+            int bit=n%10;
+            decimal=(bit*i)+decimal;
+            n=n/10;
+            i=i*2;
+        }
+        System.out.println(decimal);
+    }
+}
